@@ -1,0 +1,16 @@
+.textureTitle {	
+	background-image: url(Pic/Textures/texture01.jpg);
+	height: 150px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+	border: 1px solid yellow;
+	margin: -8px;
+	
+}
+.titletext {
+	color:aqua;
+	font-size: 25px;
+	text-align: center;
+	margin-top: 50px;
