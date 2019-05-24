@@ -1,0 +1,213 @@
+<!doctype html>
+<html>
+	<body id="texture1">
+	<head>
+		<title>Sivu</title>
+		<link rel="stylesheet"  href="../index.css">
+			<script type="text/javascript" src="../index.js"></script>			
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+			
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>	
+		<div class="navbar navmargin">
+			<a href="../index.html">Etusivu</a>
+			<a href="./sivu1.html">Testi</a>
+			<a href="./sivu2.html">Tietoa</a>
+			<a class="disabled" href="">Tulossa</a>
+			<a class="disabled" href="">Tulossa</a>
+		</div>
+		<div class="textureTitle">
+			<p class="titletext">Sivu 1!</p>
+		</div>
+	<div class="box1">
+		<h2>Teksti</h2>
+		<p>Coming soon!<p>
+		<br><hr>
+	</div>
+		<div class="boxnew1"><h2>Uusi boksi 2</h2>
+			<input class="button01" rel="myTable1" type="button" value="Avaa 1"/
+			 onclick="buttonWindow(this, 'Avaa 1','Piilota')">
+			 <input class="button01" rel="myTable2" type="button" value="Avaa 2"/
+			 onclick="buttonWindow(this, 'Avaa 2','Piilota')">
+			 <input class="button01" rel="myTable3" type="button" value="Avaa 3"/
+			 onclick="buttonWindow(this, 'Avaa 3','Piilota')"><br><br>
+			<hr style="color:coral">			
+			<table id="myTable1">
+				<tr><br>		
+					<td>
+					<div id="test01">
+						<h2>Testi 01</h2>
+						<img id="boxPic01" src="../Pic/Pictures/Buttonpic1.jpg">
+						<p>Testi teksi ja kuva 1!</p>
+					</div>
+					</td>			
+				</tr>
+			</table> 
+		
+			<table id="myTable2">
+				<tr>
+					<td>
+					<h2>Testi 02</h2>
+					<img id="boxPic02" src="../Pic/Pictures/Buttonpic2.jpg">
+					<p>Testi teksi ja kuva 2!</p>
+					</td>
+				</tr>
+			</table>			
+			<table id="myTable3">
+				<tr>
+					<td>
+					<h2>Testi 03</h2>
+					<img id="boxPic03" src="../Pic/Pictures/Buttonpic3.jpg">
+					<p>Testi teksi ja kuva 3!</p>	
+					</td>		
+				</tr>
+			</table>
+		</div>		
+			<div class="parallax3"></div> <!-- Chess parallax-->
+			<div class="boxnew1"><h2>Uusi boksi 3</h2>
+				
+				<button id="button" value="1">Testi 1!</button>
+				<button id="button" value="2">Testi 2!</button>
+				<button id="button" value="3">Testi 3!</button>					
+				<button id="Bhide" value="hide">Piilota</button>				
+				<button id="Bshow" value="show">Kaikki</button>
+				<br>
+				<br>
+				<div class="menu">			
+					<div id="1" >
+						<h2>Testi 01</h2>
+						<img id="boxPic01" src="../Pic/Pictures/Buttonpic1.jpg">
+						<p>Testi teksi ja kuva 1!</p>
+					</div>
+					<div id="2" >
+
+						<h2>Testi 02</h2>
+					<img id="boxPic02" src="../Pic/Pictures/Buttonpic2.jpg">
+					<p>Testi teksi ja kuva 2!</p>
+					</div>
+					<div id="3" >
+
+							<h2>Testi 03</h2>
+							<img id="boxPic03" src="../Pic/Pictures/Buttonpic3.jpg">
+							<p>Testi teksi ja kuva 3!</p>
+					</div>			
+				</div>
+			</div>
+				<script>					
+					
+					$(document).ready(function(){
+						$("div.menu").children().hide();
+						$("#Bhide").click(function(){
+							
+							$("div.menu").children().hide();							
+						});
+												
+						$("button").click(function(event){
+							
+						
+							var arvo = event.target.value;
+							
+					
+							$("div.menu").children().hide();
+							
+						
+							if(arvo == "show"){
+								
+								$("div.menu").children().show();
+								
+							}
+							else{
+								
+							
+								$("#"+arvo).show();
+								
+							}
+						});
+					});
+				</script>					
+			<div class="parallax4"></div> <!-- parallax-->
+
+	<div class="box4"><h2>Boksi 4</h2>
+		
+		<button id="button1" value="b01">Testi 1!</button>
+		<button id="button2" value="b02">Testi 2!</button>
+		<button id="button3" value="b03">Testi 3!</button>
+		<button id="button4">Testi 4!</button>
+		<button id="piilota" value="piilota">Piilota</button>				
+		<button id="kaikki" value="kaikki">Kaikki</button>
+			<div class="menuNew">
+			
+					<div id="b01" >
+
+					<h2>Testi 01</h2>
+					<img id="boxPic01" src="../Pic/Pictures/Buttonpic1.jpg">
+					<p>Testi teksi ja kuva 1!</p>
+
+					</div>
+					<div id="b02" >
+
+						<h2>Testi 02</h2>
+						<img id="boxPic02" src="../Pic/Pictures/Buttonpic2.jpg">
+						<p>Testi teksi ja kuva 2!</p>
+
+					</div>
+					<div id="b03">
+						<h2>Testi 03</h2>
+						<img id="boxPic03" src="../Pic/Pictures/Buttonpic3.jpg">
+						<p>Testi teksi ja kuva 3!</p>	
+					</div>				
+					<div id="plaa">
+
+						<h2>Testi 04</h2>
+						<img id="boxPic01" style="display:block;" src="../Pic/Pictures/Buttonpic3.jpg">
+						<p>Testi teksi ja kuva 3!</p>	
+					</div>	
+			</div>
+		
+	</div>	
+		
+		<script>
+				$(document).ready(function(){
+					$("div.menuNew").children().hide();		
+					
+					$("#kaikki").click(function(){
+						$("div.menuNew").children().show();
+					});
+
+					$("#piilota").click(function(){
+					 $("div.menuNew").children().hide();
+
+					});
+
+					$("#button1").click(function(){
+						$("div.menuNew").children().hide();
+						$("#b01").show();
+						
+					});
+					
+					$("#button2").click(function(){
+						$("div.menuNew").children().hide();
+						$("#b02").show();
+						
+					});
+					
+					$("#button3").click(function(){
+						$("div.menuNew").children().hide();
+						$("#b03").show();
+						
+					});
+					
+					
+  				});
+  				
+  				$("#button4").click(function(){
+						$("#plaa").toggle();
+						console.log("hghdfklghgh");
+				});
+		</script>
+		<div class="parallax4"></div> <!-- parallax-->
+		<div class="box4"><h2>Boksi 5</h2>
+		
+		</div>
+	</body>
+</html>

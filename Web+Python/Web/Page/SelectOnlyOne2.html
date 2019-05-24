@@ -1,0 +1,76 @@
+ <!DOCTYPE html>
+<html>
+<head>
+	<title>Button</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+
+	<button id="Bhide" value="hide">Hide all</button>
+	<button id="button" value="1">1</button>
+	<button id="button" value="2">2</button>
+	<button id="button" value="3">3</button>
+	<button id="button" value="4">4</button>
+	<button id="Bshow" value="show">Show all</button>
+	<br>
+	<br>
+	<div class="menu">
+
+		<div id="1" >1</div>
+		<div id="2" >2</div>
+		<div id="3" >3</div>
+		<div id="4" >4</div>
+		
+	</div>
+
+
+	<script>
+		
+		
+		$(document).ready(function(){
+			
+			$("#Bhide").click(function(){
+				
+				$("div.menu").children().hide();
+				
+			});
+			
+			//kaikkia button tagejä voi painaa ja painetun tagin objekti annetaan
+			//funktiolle argumentiksi("event").
+			$("button").click(function(event){
+				
+				//painetun button tagin value 
+				var arvo = event.target.value;
+				
+				//kaikki piilotetaan
+				$("div.menu").children().hide();
+				
+				//näytetään joko kaikki tai yksitellen
+				if(arvo == "show"){
+					
+					$("div.menu").children().show();
+					
+				}
+				else{
+					
+					//yhdistetään #-merkki button tagin valueeseen ja saadaan
+					//divin id, joka näytetään
+					$("#"+arvo).show();
+					
+				}
+				
+				
+			});
+			
+			
+			
+		});
+		 
+		 
+
+
+
+	</script>
+
+</body>
+</html> 
